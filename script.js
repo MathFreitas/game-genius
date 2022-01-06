@@ -83,3 +83,10 @@ let gameOver = () => {
 
     playGame();
 }
+
+let playGame = () => {
+    alert('Bem vindo ao Genius! Iniciando novo jogo!')
+    score = 0;
+
+    nextLevel();
+}
