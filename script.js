@@ -1,3 +1,5 @@
+const { element } = require("prop-types");
+
 let order = [];
 let clickedOrder = [];
 let score = 0;
@@ -44,4 +46,15 @@ let checkOrder = () => {
         alert(`Pontuação: ${score}\nVocê acertou! Iniciando próximo nível!`);
         nextLevel();
     }
+}
+
+let click = (color) => {
+    clickedOrder[clickedOrder.length = color];
+    createColorElement(color).classList.add('selected');
+
+    setTimeout(() => {
+        createColorElement(color).classList.remove('selected');
+    });
+
+    checkOrder();
 }
